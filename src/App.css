@@ -1,0 +1,115 @@
+html {
+	height: 100%;
+}
+
+.App {
+	text-align: center;
+}
+
+.App-logo {
+	animation: App-logo-spin infinite 20s linear;
+	height: 80px;
+}
+
+.App-header {
+	background-color: #222;
+	height: 150px;
+	padding: 20px;
+	color: white;
+}
+
+.App-intro {
+	font-size: large;
+}
+
+.millioner-app {
+	padding: 40px 0;
+}
+
+.millioner-app img {
+	margin: 0 auto;
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+input[type="text"] {
+	padding: 10px;
+	display: block;
+	margin: 10px auto;
+	background: #8080f5;
+	outline: none;
+	border: 3px solid #fff;
+}
+
+.submit-btn {
+	padding: 10px 20px;
+}
+
+form {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+form label {
+	width: 45%;
+	margin: 0 2.5% 15px;
+	display: block;
+	color: #fff;
+	text-align: center;
+	float: left;
+}
+
+form .question-block {
+	margin: 0 0 15px 0;
+	width: 100%;
+}
+
+form .question-block input {
+	min-width: 300px;
+}
+
+input[type="submit"] {
+	padding: 10px 15px;
+	border: 3px solid yellow;
+	outline: none;
+	margin: 0 10px;
+	background: none;
+	color: #fff;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.questions-list {
+	color: #fff;
+}
+
+.questions-list ul {
+	padding: 0;
+	list-style: none;
+	display: inline-block;
+	width: 100%;
+}
+
+.questions-list li {
+	width: 45%;
+	margin: 0 2.5% 15px;
+	text-align: center;
+	float: left;
+	padding: 10px 15px;
+	box-sizing: border-box;
+	border: 3px solid yellow;
+	cursor: pointer;
+}
+
+.questions-list li:hover,
+.questions-list li:focus {
+	background: yellow;
+	color: #000;
+}
