@@ -181,6 +181,7 @@ label input[type="text"] {
 	background: transparent;
 	outline: none;
 	color: #fff;
+
 	padding: 0 45px 0 60px;
 	text-transform: uppercase;
 }
