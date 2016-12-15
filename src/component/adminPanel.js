@@ -42,22 +42,46 @@ class AdminPanel extends Component {
 	render() {
 		return (
 			<div className="admin-panel">
+				<h1>Please add answer and questions for him</h1>
 				<form action="" onSubmit={this.saveQuestion}>
-					<label className="question-block" htmlFor="question"> Question
-						<input type="text" ref="question" id="question"/>
-					</label><br/>
-					<label htmlFor="AnswerOne"> AnswerOne
-						<input type="text" ref="AnswerOne" id="AnswerOne"/>
-					</label><br/>
-					<label htmlFor="AnswerTwo"> AnswerTwo
-						<input type="text" ref="AnswerTwo" id="AnswerTwo"/>
-					</label><br/>
-					<label htmlFor="AnswerThree"> AnswerThree
-						<input type="text" ref="AnswerThree" id="AnswerThree"/>
-					</label><br/>
-					<label htmlFor="AnswerFour"> AnswerFour
-						<input type="text" ref="AnswerFour" id="AnswerFour"/>
-					</label><br/>
+					<div id="question_answer">
+						<div className="question">
+							<p id="question">
+								<label className="question-block" htmlFor="question">
+									<input type="text" ref="question" id="question"/>
+								</label>
+							</p>
+						</div>
+						<div className="top_ans">
+							<div className="ans_1">
+								<label htmlFor="AnswerOne">
+									<span> A: </span>
+									<input type="text" ref="AnswerOne" id="AnswerOne"/>
+								</label>
+							</div>
+							<div className="ans_2">
+								<label htmlFor="AnswerTwo">
+									<span> B: </span>
+									<input type="text" ref="AnswerTwo" id="AnswerTwo"/>
+								</label>
+							</div>
+						</div>
+						<div className="bot_ans">
+							<div className="ans_1">
+								<label htmlFor="AnswerThree">
+									<span> C: </span>
+									<input type="text" ref="AnswerThree" id="AnswerThree"/>
+								</label>
+							</div>
+							<div className="ans_2">
+								<label htmlFor="AnswerFour">
+									<span> D: </span>
+									<input type="text" ref="AnswerFour" id="AnswerFour"/>
+								</label>
+							</div>
+						</div>
+					</div>
+
 					<input className="submit-btn" type="submit" value="Add"/>
 					<input className="close-admin-btn" type="submit" value="Close Admin Panel"
 						   onClick={this.closePanel}/>
