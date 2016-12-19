@@ -60,11 +60,6 @@ ul {
 	list-style-type: none;
 }
 
-.question_list {
-	margin: -60px 0 0 760px;
-	height: 480px;
-}
-
 .question_list li {
 	line-height: 120%;
 	margin-bottom: 9px;
@@ -93,27 +88,27 @@ ul {
 	height: 84px;
 }
 
-
-.top_ans,.bot_ans  {
+.top_ans, .bot_ans {
 	display: inline-block;
 	overflow: auto;
 	width: 100%;
 }
 
-.ans_1,.ans_2 {
+.ans_1, .ans_2, .ans_0, .ans_3 {
 	font: 18px Arial;
 	color: #fff;
-	margin: 12px 0 0 0px;
-	/* float: left; */
+	margin: 12px 0 0 0;
+	vertical-align: text-bottom;
 	display: inline-block;
 }
 
-.ans_2 {
-	margin: 12px 0 0 29px;
-	_margin: 12px 0 0 29px;
+.ans ul {
+	padding: 0;
+	max-width: 690px;
+	margin: 0 auto;
 }
 
-.ans_1 label,.ans_2 label {
+.ans_1 label, .ans_2 label, .ans_3 label, .ans_4 label, .ans_0 label {
 	background: url('../images/anwser_bg.jpg') left top no-repeat;
 	width: 340px;
 	height: 40px;
@@ -123,21 +118,37 @@ ul {
 	display: block;
 }
 
+.ans-list li {
+	width: 50%;
+}
+
+.ans-list li a {
+	line-height: 40px;
+	display: block;
+	color: #fff;
+	text-decoration: none;
+}
+
+.ans-list li a:hover {
+	background: url('../images/anwser_hover_bg.jpg') left top no-repeat;
+	color: #000;
+}
+
 * {
 	box-sizing: border-box;
 }
 
-.ans_1 label span,.ans_2 label span {
+.ans_1 label span, .ans_2 label span {
 	padding-left: 10px;
 	color: #e1a02e !important
 }
 
-* html .ans_1  a {
+* html .ans_1 a {
 	width: 337px;
 	height: 39px;
 }
 
-* html .ans_2  a {
+* html .ans_2 a {
 	width: 337px;
 	height: 39px;
 }
@@ -162,6 +173,7 @@ h1 {
 	padding: 0;
 	height: 80px;
 	overflow: hidden;
+	line-height: 80px;
 }
 
 #question input {
@@ -185,12 +197,13 @@ label input[type="text"] {
 	padding: 0 45px 0 60px;
 	text-transform: uppercase;
 }
+
 .ans_1 label span, .ans_2 label span {
 	background: url('../images/org_dot.gif') left center no-repeat;
 	padding: 0 0 0 10px;
 	color: #e1a02e;
 	float: left;
-	margin:  0 0 0 20px;
+	margin: 0 0 0 20px;
 	line-height: 40px;
 }
 
@@ -204,4 +217,61 @@ input[type="submit"] {
 	font-size: 20px;
 	text-transform: uppercase;
 	cursor: pointer;
+}
+
+.game-container {
+	display: inline-block;
+	width: 100%;
+}
+
+.game-panel {
+	float: left;
+	width: 60%;
+}
+
+.step-panel {
+	float: right;
+	width: 40%;
+	padding: 0 0 0 10%;
+}
+
+.question_list li {
+	line-height: 120%;
+	margin-bottom: 9px;
+	font: 16px Arial;
+	color: rgb(225, 160, 46);
+}
+
+.num {
+	width: 25px;
+	text-align: right;
+	display: block
+}
+
+.money {
+	width: 110px;
+	margin: -19px 0 0 50px;
+	display: block
+}
+
+.fire {
+	color: #fff !important;
+	font-weight: bold !important;
+}
+
+.org_bg, #org_bg {
+	background: url('../images/money_bg.gif') left top no-repeat;
+	width: 173px;
+	height: 19px;
+	padding-top: 1px;
+}
+
+.org_bg .num {
+	color: #fff;
+}
+
+.org_bg .money {
+	color: #000;
+	font-weight: bold !important;
+	margin: -18px 0 0 50px;
 }

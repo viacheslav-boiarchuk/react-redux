@@ -7,13 +7,25 @@ import {connect} from 'react-redux';
 class GamePanel extends Component {
 	render() {
 		return (
-			<div>
+			<div className="game-panel">
 				{this.props.questions.map((item) =>
-					<div className="questions-list">
-						<h1>{item.question}</h1>
-						<ul>
-							{item.answers.map((item) => <li>{item.text}</li>)}
-						</ul>
+					<div id="question_answer">
+						<div key="question" className="question">
+							<p id="question">
+								<label>{item.question}</label>
+							</p>
+						</div>
+						<div key="ans" className="ans">
+							<ul className="ans-list">
+								{item.answers.map((item, counter) =>
+									<li key={counter} className={"ans_" + counter}>
+										<label htmlFor="">
+											<a href="#" className="answer">{item.text}</a>
+										</label>
+									</li>)
+								}
+							</ul>
+						</div>
 					</div>
 				)}
 			</div>

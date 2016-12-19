@@ -8,7 +8,6 @@ const initialGameState = {
 	adminPanel: true
 };
 
-
 export default function(state = initialGameState ,action){
 	switch (action.type) {
 		case getReducersList().ADD_QUESTION:
