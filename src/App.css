@@ -275,3 +275,18 @@ input[type="submit"] {
 	font-weight: bold !important;
 	margin: -18px 0 0 50px;
 }
+
+.correct-answer-container {
+	padding: 30px 0;
+	text-align: center;
+}
+
+.correct-answer-container label {
+	position: static;
+	color: #fff;
+}
+
+.correct-answer-container select {
+	padding: 10px;
+	margin: 20px 0 0 0;
+}

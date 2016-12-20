@@ -3,12 +3,12 @@
  */
 import {getReducersList} from '../actions/actions';
 
-const initialGameState = {
+const initialState = {
 	questions: [],
 	adminPanel: true
 };
 
-export default function(state = initialGameState ,action){
+export default function(state = initialState ,action){
 	switch (action.type) {
 		case getReducersList().ADD_QUESTION:
 			return {

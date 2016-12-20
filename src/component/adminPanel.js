@@ -28,7 +28,8 @@ class AdminPanel extends Component {
 					text: this.refs.AnswerFour.value,
 					correct: false
 				}
-			]
+			],
+			correctAnswer: this.refs.correct_answer.value
 		};
 		this.props.addQuestion(answerObject);
 		e.target.reset();
@@ -81,7 +82,14 @@ class AdminPanel extends Component {
 							</div>
 						</div>
 					</div>
-
+					
+					<div className="correct-answer-container"><label htmlFor="">Choose Correct Answer <br/>
+						<select name="correct_answer" ref="correct_answer" id="correct_answer">
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+							<option value="D">D</option>
+						</select></label></div>
 					<input className="submit-btn" type="submit" value="Add"/>
 					<input className="close-admin-btn" type="submit" value="Close Admin Panel"
 						   onClick={this.closePanel}/>
