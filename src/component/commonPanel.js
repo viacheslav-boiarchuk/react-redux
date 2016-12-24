@@ -6,13 +6,13 @@ import store from '../store/index';
 import logo from '../../images/logo.jpg';
 import AsideStepPanel from './asideStepPanel';
 
-class CommonView extends Component {
+class CommonPanel extends Component {
 	render() {
 		console.log(this.props);
 		return (
 			<div className="millioner-app">
 				<img src={logo} alt="logo"/>
-				{store.getState().game.adminPanel ? <AdminPanel /> :
+				{store.getState().adminBoard.adminPanel ? <AdminPanel /> :
 					<div className="game-container">
 						<GamePanel />
 						<AsideStepPanel />
@@ -26,8 +26,8 @@ class CommonView extends Component {
 export default connect(
 	state => {
 		return {
-			adminPanel: state.game.adminPanel
+			adminPanel: state.adminBoard.adminPanel
 		}
 	},
 	{}
-)(CommonView);
+)(CommonPanel);

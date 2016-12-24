@@ -14,19 +14,19 @@ class AdminPanel extends Component {
 			answers: [
 				{
 					text: this.refs.AnswerOne.value,
-					correct: true
+					field:  this.refs.AnswerOne.getAttribute('data-answerAttr')
 				},
 				{
 					text: this.refs.AnswerTwo.value,
-					correct: false
+					field:  this.refs.AnswerTwo.getAttribute('data-answerAttr')
 				},
 				{
 					text: this.refs.AnswerThree.value,
-					correct: false
+					field:  this.refs.AnswerThree.getAttribute('data-answerAttr')
 				},
 				{
 					text: this.refs.AnswerFour.value,
-					correct: false
+					field:  this.refs.AnswerFour.getAttribute('data-answerAttr')
 				}
 			],
 			correctAnswer: this.refs.correct_answer.value
@@ -43,7 +43,7 @@ class AdminPanel extends Component {
 	render() {
 		return (
 			<div className="admin-panel">
-				<h1>Please add answer and questions for him</h1>
+				<h1>Please add questions and answers for them</h1>
 				<form action="" onSubmit={this.saveQuestion}>
 					<div id="question_answer">
 						<div className="question">
@@ -57,13 +57,13 @@ class AdminPanel extends Component {
 							<div className="ans_1">
 								<label htmlFor="AnswerOne">
 									<span> A: </span>
-									<input type="text" ref="AnswerOne" id="AnswerOne"/>
+									<input type="text" ref="AnswerOne" data-answerAttr="A" id="AnswerOne"/>
 								</label>
 							</div>
 							<div className="ans_2">
 								<label htmlFor="AnswerTwo">
 									<span> B: </span>
-									<input type="text" ref="AnswerTwo" id="AnswerTwo"/>
+									<input type="text" ref="AnswerTwo" data-answerAttr="B" id="AnswerTwo"/>
 								</label>
 							</div>
 						</div>
@@ -71,13 +71,13 @@ class AdminPanel extends Component {
 							<div className="ans_1">
 								<label htmlFor="AnswerThree">
 									<span> C: </span>
-									<input type="text" ref="AnswerThree" id="AnswerThree"/>
+									<input type="text" ref="AnswerThree" data-answerAttr="C" id="AnswerThree"/>
 								</label>
 							</div>
 							<div className="ans_2">
 								<label htmlFor="AnswerFour">
 									<span> D: </span>
-									<input type="text" ref="AnswerFour" id="AnswerFour"/>
+									<input type="text" ref="AnswerFour" data-answerAttr="D" id="AnswerFour"/>
 								</label>
 							</div>
 						</div>

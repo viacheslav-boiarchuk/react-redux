@@ -229,6 +229,14 @@ input[type="submit"] {
 	width: 60%;
 }
 
+.game-panel #question_answer {
+	display: none;
+}
+
+.game-panel #question_answer.active-question {
+	display: block;
+}
+
 .step-panel {
 	float: right;
 	width: 40%;

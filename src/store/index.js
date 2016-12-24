@@ -5,14 +5,15 @@ import {createStore, combineReducers, applyMiddleware} from 'redux';
 import backendGameReducer from '../reducers/backendGameReducer';
 import frontendGameReducer from '../reducers/frontendGameReducer';
 import loggerMiddleware from 'redux-logger';
+import frontEndMiddleWares from '../middlewares/frontEndMiddleWare';
 
 const reducer = combineReducers({
-	game: backendGameReducer,
-	frontPartGame: frontendGameReducer
+	adminBoard: backendGameReducer,
+	userBoard: frontendGameReducer
 });
 
 const store = createStore(reducer, applyMiddleware(
-	loggerMiddleware()
+		frontEndMiddleWares, loggerMiddleware()
 ));
 
 export  default store;
